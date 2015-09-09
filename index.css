@@ -212,7 +212,7 @@ body {
 .me {
   width: 160px;
   height: auto;
-  top: 3740px;
+  top: 3748px;
   position: absolute;
   left: 60px;
   z-index: 4; }
@@ -222,7 +222,7 @@ body {
 .earth {
   position: relative;
   width: 100%;
-  top: 2099px;
+  top: 2116px;
   z-index: 0; }
   .earth img {
     width: 100%; }
@@ -230,7 +230,7 @@ body {
 .rocket {
   width: 370px;
   height: 498px;
-  top: 2054px;
+  top: 2074px;
   position: relative;
   left: 380px;
   z-index: 2; }
