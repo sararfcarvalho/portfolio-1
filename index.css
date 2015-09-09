@@ -1,0 +1,250 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: url(images/fundo_final.jpg);
+  padding-bottom: 0;
+  max-height: 4280px;
+  max-width: 100vw; }
+  body ul {
+    position: fixed; }
+    body ul .stars {
+      position: relative;
+      width: 100vw; }
+      body ul .stars li img {
+        width: 100%;
+        height: auto; }
+
+.content {
+  width: 800px;
+  min-height: 4280px;
+  margin: 0 auto;
+  position: relative; }
+  .content .planets {
+    top: 930px;
+    position: relative;
+    cursor: pointer;
+    display: block; }
+    .content .planets #planet5, .content .planets #planet6, .content .planets #planet7 {
+      width: 8%;
+      position: relative; }
+    .content .planets #planet6 {
+      top: -60px; }
+    .content .planets #planet7 {
+      top: 60px;
+      left: 45px; }
+    .content .planets #planet5 {
+      top: -190px;
+      left: 10px; }
+    .content .planets .birth {
+      position: relative;
+      top: -100px;
+      display: inline-block;
+      width: 20%; }
+      .content .planets .birth #planet2 {
+        width: 100%; }
+      .content .planets .birth #et1 {
+        width: 130%;
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        top: -140px;
+        left: 10px; }
+      .content .planets .birth:hover #et1 {
+        opacity: 1; }
+    .content .planets .english {
+      display: inline-block;
+      position: relative;
+      width: 25%;
+      top: 70px; }
+      .content .planets .english #planet3 {
+        width: 100%; }
+      .content .planets .english #et2 {
+        opacity: 0;
+        left: -20px;
+        top: -230px;
+        z-index: 1;
+        position: absolute;
+        width: 100%; }
+      .content .planets .english:hover #et2 {
+        opacity: 1; }
+    .content .planets .cm {
+      display: inline-block;
+      position: relative;
+      width: 25%;
+      top: -30px; }
+      .content .planets .cm #planet4 {
+        width: 130%; }
+      .content .planets .cm #et3 {
+        opacity: 0;
+        left: 50px;
+        top: -195px;
+        position: absolute;
+        width: 130%;
+        z-index: 1; }
+      .content .planets .cm:hover #et3 {
+        opacity: 1; }
+
+.moon {
+  position: fixed;
+  top: 5%;
+  left: 41vw; }
+  .moon img {
+    width: 250px;
+    height: auto; }
+
+#trigger {
+  position: relative; }
+  #trigger #plane {
+    position: absolute;
+    left: -350px;
+    top: 500px;
+    width: 70px; }
+
+.light {
+  background-image: url(images/spaceshiplight.png);
+  background-repeat: no-repeat;
+  background-size: 240px;
+  position: relative;
+  z-index: 3;
+  top: 834px;
+  left: 35%; }
+
+#trigger2 {
+  position: absolute;
+  width: 640px;
+  top: 1850px;
+  left: 0; }
+  #trigger2 #spaceship {
+    width: 12%; }
+
+#target2 {
+  background-image: url(images/spaceship.png);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  height: 530px;
+  left: -550px;
+  position: relative;
+  width: 490px; }
+
+.skillsprog {
+  position: relative;
+  background-image: url(images/spaship_skills.png);
+  background-repeat: no-repeat;
+  background-size: 455px;
+  background-position: 173px 87px;
+  position: relative;
+  width: 550px;
+  height: 610px; }
+
+.skills-prog {
+  position: relative;
+  top: 1080px;
+  width: 60%; }
+  .skills-prog img {
+    width: 100%; }
+
+.skills-software {
+  position: relative;
+  top: 1600px;
+  width: 60%; }
+  .skills-software img {
+    width: 100%; }
+
+.skills {
+  left: -950px;
+  top: 1700px;
+  width: 100%;
+  height: 100px;
+  position: relative; }
+  .skills img {
+    width: 100%; }
+
+.cometa {
+  left: -972px;
+  top: 550px;
+  width: 60%;
+  height: 100px;
+  position: relative; }
+  .cometa img {
+    width: 100%; }
+
+.spaceship_me #spaceshipme {
+  display: none; }
+
+.final {
+  top: 2000px;
+  width: 100%;
+  height: 300px;
+  position: relative; }
+  .final #spaceshipme {
+    position: absolute;
+    left: -200px;
+    width: 25%; }
+  .final .interests {
+    position: absolute;
+    margin-right: 30px; }
+    .final .interests #coffee {
+      left: 100px !important; }
+      .final .interests #coffee img {
+        width: 350px !important;
+        height: auto; }
+    .final .interests #book {
+      left: 5px !important; }
+      .final .interests #book img {
+        width: 350px !important;
+        height: auto; }
+    .final .interests #pencil {
+      left: 70px !important;
+      z-index: 4; }
+      .final .interests #pencil img {
+        width: 250px !important;
+        height: auto; }
+    .final .interests #placa {
+      top: 420px !important;
+      left: 160px !important;
+      z-index: 10 !important; }
+      .final .interests #placa img {
+        width: 350px !important; }
+
+.me {
+  width: 160px;
+  height: auto;
+  top: 3740px;
+  position: absolute;
+  left: 60px;
+  z-index: 4; }
+  .me img {
+    width: 100%; }
+
+.earth {
+  position: relative;
+  width: 100%;
+  top: 2099px;
+  z-index: 0; }
+  .earth img {
+    width: 100%; }
+
+.rocket {
+  width: 370px;
+  height: 498px;
+  top: 2054px;
+  position: relative;
+  left: 380px;
+  z-index: 2; }
+  .rocket img {
+    width: 100%; }
+  .rocket .buttons {
+    position: absolute;
+    left: 113px;
+    top: 161px;
+    width: 39%; }
+    .rocket .buttons img {
+      width: 100%;
+      height: auto; }
+    .rocket .buttons #be:hover {
+      content: url(images/buttons_be_hover.png); }
+    .rocket .buttons #in:hover {
+      content: url(images/buttons_in_hover.png); }

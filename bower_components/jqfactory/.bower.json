@@ -1,0 +1,14 @@
+{
+  "name": "jqfactory",
+  "homepage": "https://github.com/gfranko/jqfactory",
+  "version": "0.3.0",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "be07660636bc14999b0590728ef7c4d8edb0ee8e"
+  },
+  "_source": "https://github.com/gfranko/jqfactory.git",
+  "_target": "~0.3.0",
+  "_originalSource": "https://github.com/gfranko/jqfactory.git"
+}
