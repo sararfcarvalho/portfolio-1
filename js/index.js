@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 	$(window).scroll(function () {
 	var windowScrollTop = $(this).scrollTop();
 
@@ -32,9 +32,7 @@ $(document).ready(function() {
 	   $('.final').removeClass('spaceship_me');
 	}
 	});
-	console.log($windowScrollTop);
 
-})(jQuery);
 
 
 //elementos aparecem/desaparecem conforme o scroll
