@@ -1,24 +1,43 @@
+if (window.addEventListener) 
+	window.addEventListener('DOMMouseScroll', wheel, false);
+window.onmousewheel = document.onmousewheel = wheel;
+
+function wheel(event) {
+	var delta = 30;
+    var scroll = 2;
+    
+    var wheelDelta = Math.abs(event.wheelDelta);
+    var signal = -Math.sign(event.wheelDelta);	
+   
+    if (wheelDelta > delta) {
+    	window.scrollBy(0,scroll*signal);
+    	event.preventDefault();
+    	event.returnValue = false;
+    }
+
+}
+
 
 	$(window).scroll(function () {
 	var windowScrollTop = $(this).scrollTop();
 
-	if(windowScrollTop>705){
+	if(windowScrollTop>860){
 	    $('#trigger').addClass('light');
 	}
 	else {
 	    $('#trigger').removeClass('light');
 	}
-	if(windowScrollTop>760){
+	if(windowScrollTop>900){
 	   $('#trigger').removeClass('light');
 	}
 
-	if(windowScrollTop>1750){
+	if(windowScrollTop>1950){
 	   $('#trigger2').addClass('skillsprog');
 	}
 	else{
 		 $('#trigger2').removeClass('skillsprog');
 	}
-	if(windowScrollTop>1970){
+	if(windowScrollTop>2300){
 	   $('#trigger2').removeClass('skillsprog');
 	}
 
@@ -98,8 +117,8 @@ function fly(){
 				curviness: 1.25,
 				autoRotate: true,
 				values: [
-						{x: 780,	y: 20},
-						{x: 800,	y: 130},
+						{x: 500,	y: -50},
+						{x: 900,	y: 70},
 						{x: $(window).width() + 300,	y: -100},
 					]
 			}
@@ -113,14 +132,14 @@ function fly(){
 		var tween = new TimelineMax()
 			.add(TweenMax.to($("#plane"), 1, {css:{scale:2, bezier:flightpath.entry}, ease:Power1.easeInOut}))
 			.add(TweenMax.to($("#plane"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
-			.add(TweenMax.to($("#plane"), 1, {x:750, y:-50, ease:Power1.easeInOut}))
+			.add(TweenMax.to($("#plane"), 1, {opacity:0, ease:Power1.easeInOut}))
 
 		
 		var scene = new ScrollMagic.Scene({
 			//triggerElement: "#trigger", //a cena começa qd se alcança o trigger
 			reverse: true,
-			duration: 450, // durante o tempo da height da janela
-			offset: 350 //começa depois de fazer scroll x px
+			duration: 500, // durante o tempo da height da janela
+			offset: 500 //começa depois de fazer scroll x px
 		})
 		.setPin("#target") //o elemento q queremos q faça a animaçao
 		.setTween(tween);
@@ -129,13 +148,13 @@ function fly(){
 
 		//spaceship with me
 		var me_tween = new TimelineMax()
-		.add(TweenMax.to($("#spaceshipme"), 2, {css:{scale:3, bezier:flightpath.leave}, ease:Power1.easeInOut}));
+		.add(TweenMax.to($("#spaceshipme"), 1, {css:{scale:3, bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
 		var me_scene = new ScrollMagic.Scene({
 			//triggerElement: "#run", //a cena começa qd se alcança o trigger
 			reverse: true,
-			duration: 800, // durante o tempo da height da janela
-			offset: 2600 //começa depois de fazer scroll x px
+			duration: 700, // durante o tempo da height da janela
+			offset: 2900 //começa depois de fazer scroll x px
 		})
 		.setTween(me_tween);
 
@@ -147,7 +166,7 @@ function fly(){
 		var scene2 = new ScrollMagic.Scene({
 			//triggerElement: ".planets",
 			reverse: true,
-			duration: 250, // faz animaçao durante o scroll de x px
+			duration: 450, // faz animaçao durante o scroll de x px
 			offset: 1500 //começa depois de fazer scroll x px
 		})
 		.setTween(spaceship_tween);
@@ -160,22 +179,22 @@ function fly(){
 		var skills_scene = new ScrollMagic.Scene({
 			//triggerElement: ".planets",
 			reverse: true,
-			duration: 350, // faz animaçao durante o scroll de x px
-			offset: 2200 //começa depois de fazer scroll x px
+			duration: 600, // faz animaçao durante o scroll de x px
+			offset: 2500 //começa depois de fazer scroll x px
 		})
 		.setTween(skills_tween);
 
 		//cometa 
 		var cometa_tween = new TimelineMax()
-		.add(TweenMax.to($("#cometa"), 2, {x:1600, y:580, ease:Power1.easeInOut}))
-		.add(TweenMax.to($("#cometa"), 1, {scale:0.5, opacity:0, ease:Power1.easeInOut}));
+		.add(TweenMax.to($("#cometa"), 2, {x:2200, y:580, ease:Power1.easeInOut}))
+		.add(TweenMax.to($("#cometa"), 2, {scale:0.5, opacity:0, ease:Power1.easeInOut}));
 
 
 		var cometa_scene = new ScrollMagic.Scene({
 			//triggerElement: ".planets",
 			reverse: true,
-			duration: 350, // faz animaçao durante o scroll de x px
-			offset: 1850 //começa depois de fazer scroll x px
+			duration: 800, // faz animaçao durante o scroll de x px
+			offset: 2200 //começa depois de fazer scroll x px
 		})
 		.setTween(cometa_tween);
 
@@ -254,26 +273,26 @@ function fly(){
 			var sequence_doll = TweenMax.to(obj, 0.05,
 			{
 					curImg: images.length - 1,	// animate propery curImg to number of images
-					roundProps: "curImg",				// only integers so it can be used as an array index
-					repeat: 0,									// repeat 3 times
-					immediateRender: true,			// load first image automatically
-					ease: Linear.easeOut,			// show every image the same ammount of time
+					roundProps: "curImg",		// only integers so it can be used as an array index
+					repeat: 0,					// repeat 3 times
+					immediateRender: true,		// load first image automatically
+					ease: Linear.easeOut,		// show every image the same ammount of time
 					onUpdate: function () {
 					  $("#doll").attr("src", images[obj.curImg]); // set the image source
 					}
 			});
 
-			var doll = new ScrollMagic.Scene({duration: 1200})
+			var doll = new ScrollMagic.Scene({duration: 2100})
 					.setTween(sequence_doll);
 
 			//queda
 			var doll_tween = new TimelineMax()
-		 	.add(TweenMax.to($("#doll"), 0.5, { y:100, ease:Circ.easeOut}));//movimento lançar
+		 	.add(TweenMax.to($("#doll"), 0.5, { y:200, ease:Circ.easeOut}));//movimento lançar
 
 			var doll_scene = new ScrollMagic.Scene({
 			reverse: true,
-			duration: 230, // faz animaçao durante o scroll de x px
-			offset: 400 //começa depois de fazer scroll x px
+			duration: 200, // faz animaçao durante o scroll de x px
+			offset: 630 //começa depois de fazer scroll x px
 			})
 			.setTween(doll_tween);
 
@@ -284,7 +303,7 @@ function fly(){
 			var opacity_scene = new ScrollMagic.Scene({
 			reverse: true,
 			duration: 80, // faz animaçao durante o scroll de x px
-			offset: 700 //começa depois de fazer scroll x px
+			offset: 800 //começa depois de fazer scroll x px
 			})
 			.setTween(opacity_tween);
 
