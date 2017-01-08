@@ -3,10 +3,20 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
+
+.base_wrapper { }
+.width_container { width:90vw; margin:0 auto; }
+
+#header{ width:230px; height: 330px; top: 5%; position: relative; display: block; margin: auto; vertical-align: top; }
+#header .moon { width: 230px; position: fixed; top: 5%; left: 0; right: 0; margin: 0 auto; }
+#header .moon a { position: absolute; display:block; line-height:52px; overflow:hidden; text-indent:-2000em; }
+#header .moon img { width: 250px; height: auto; }
+
 body {
   background: url(images/fundo_final.jpg);
   padding-bottom: 0;
-  max-height: 4280px;
+  /*max-height: 4280px; */
   max-width: 100vw; }
   body ul {
     position: fixed; }
@@ -19,19 +29,23 @@ body {
 
 .content {
   width: 800px;
-  min-height: 4280px;
+  min-height: 3500px;
   margin: 0 auto;
-  position: relative; }
-  .content .planets {
+  position: relative; 
+}
+.planets {
     top: 930px;
     position: relative;
     cursor: pointer;
-    display: block; }
-    .content .planets #planet5, .content .planets #planet6, .content .planets #planet7 {
-      width: 8%;
-      position: relative; }
-    .content .planets #planet6 {
-      top: -60px; }
+    display: block; 
+}
+#planet5, #planet6, #planet7 {  
+    width: 8%; 
+    position: relative; 
+}
+.content .planets #planet6 {
+    top: -60px;
+}
     .content .planets #planet7 {
       top: 60px;
       left: 45px; }
@@ -50,8 +64,8 @@ body {
         opacity: 0;
         z-index: 1;
         position: absolute;
-        top: -140px;
-        left: 10px; }
+        bottom: 100px;
+        left: 25px; }
       .content .planets .birth:hover #et1 {
         opacity: 1; }
     .content .planets .english {
@@ -63,8 +77,8 @@ body {
         width: 100%; }
       .content .planets .english #et2 {
         opacity: 0;
-        left: -20px;
-        top: -230px;
+        right: -40px;
+        bottom:160px;
         z-index: 1;
         position: absolute;
         width: 100%; }
@@ -76,24 +90,17 @@ body {
       width: 25%;
       top: -30px; }
       .content .planets .cm #planet4 {
-        width: 130%; }
+        width: 100%; }
       .content .planets .cm #et3 {
         opacity: 0;
-        left: 50px;
-        top: -195px;
+        left: 0;
+        bottom: 180px;
         position: absolute;
         width: 130%;
         z-index: 1; }
       .content .planets .cm:hover #et3 {
         opacity: 1; }
 
-.moon {
-  position: fixed;
-  top: 5%;
-  left: 41vw; }
-  .moon img {
-    width: 250px;
-    height: auto; }
 
 #trigger {
   position: relative; }
@@ -107,7 +114,6 @@ body {
   background-image: url(images/spaceshiplight.png);
   background-repeat: no-repeat;
   background-size: 240px;
-  position: relative;
   z-index: 3;
   top: 834px;
   left: 35%; }
@@ -171,80 +177,65 @@ body {
   .cometa img {
     width: 100%; }
 
-.spaceship_me #spaceshipme {
-  display: none; }
-
-.final {
-  top: 2000px;
-  width: 100%;
-  height: 300px;
-  position: relative; }
-  .final #spaceshipme {
-    position: absolute;
-    left: -200px;
+  #spaceshipme {
+    position: relative;
+    left: -300px;
+    top:2000px;
     width: 25%; }
-  .final .interests {
-    position: absolute;
-    margin-right: 30px; }
-    .final .interests #coffee {
-      left: 100px !important; }
-      .final .interests #coffee img {
-        width: 350px !important;
-        height: auto; }
-    .final .interests #book {
-      left: 5px !important; }
-      .final .interests #book img {
-        width: 350px !important;
-        height: auto; }
-    .final .interests #pencil {
-      left: 70px !important;
-      z-index: 4; }
-      .final .interests #pencil img {
-        width: 250px !important;
-        height: auto; }
-    .final .interests #placa {
-      top: 420px !important;
-      left: 160px !important;
-      z-index: 10 !important; }
-      .final .interests #placa img {
-        width: 350px !important; }
+ 
+footer { height: 500px; position: relative; display:block;  }
 
 .me {
   width: 160px;
   height: auto;
-  top: 3748px;
+  bottom:-5px;
   position: absolute;
-  left: 60px;
+  left: 25%;
   z-index: 4; }
   .me img {
     width: 100%; }
 
+ .interests {
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    z-index:11;
+  }
+  .interests #placa img {
+     width: 350px; }
+
 .earth {
-  position: relative;
+  position: absolute;
   width: 100%;
-  top: 2116px;
+  bottom:-15px;
   z-index: 0; }
   .earth img {
     width: 100%; }
 
 .rocket {
   width: 370px;
-  height: 498px;
-  top: 2074px;
-  position: relative;
-  left: 380px;
+  height: 600px;
+  bottom:15px;
+  position: absolute;
+  right: 20%;
   z-index: 2; }
   .rocket img {
     width: 100%; }
   .rocket .buttons {
     position: absolute;
-    left: 113px;
-    top: 161px;
-    width: 39%; }
-    .rocket .buttons img {
-      width: 100%;
-      height: auto; }
-    .rocket .buttons #be:hover {
-      content: url(images/buttons_be_hover.png); }
-    .rocket .buttons #in:hover {
-      content: url(images/buttons_in_hover.png); }
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom:0;
+    width: 40px;
+    height: 120px; }
+    .rocket .buttons a { display: block; line-height: 40px; text-align: center; text-decoration: none;
+      border: 2px solid white; border-radius: 50px; width: 40px; height: 40px; margin-top: 20px; cursor:pointer;}
+    .rocket .buttons a::before {
+      font-family: 'FontAwesome'; font-size: 19px; color: white; }
+    .rocket .buttons a:hover {
+      background-color:white; }
+    .rocket .buttons a:hover::before {
+      color:#9B5050; }
+
