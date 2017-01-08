@@ -21,7 +21,7 @@ function wheel(event) {
 	$(window).scroll(function () {
 	var windowScrollTop = $(this).scrollTop();
 
-	if(windowScrollTop>860){
+	if(windowScrollTop>840){
 	    $('#trigger').addClass('light');
 	}
 	else {
@@ -186,7 +186,7 @@ function fly(){
 
 		//cometa 
 		var cometa_tween = new TimelineMax()
-		.add(TweenMax.to($("#cometa"), 2, {x:2200, y:580, ease:Power1.easeInOut}))
+		.add(TweenMax.to($("#cometa"), 2, {x:1900, y:580, ease:Power1.easeInOut}))
 		.add(TweenMax.to($("#cometa"), 2, {scale:0.5, opacity:0, ease:Power1.easeInOut}));
 
 
