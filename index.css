@@ -197,22 +197,16 @@ footer { height: 500px; position: relative; display:block;  }
 
  .interests {
     position: relative;
-    width: 550px;
+    width: 80%;
     margin: 0 auto;
     z-index:11;
-    clear:both;
-    content:'';
   }
-.interests li { display:inline-block; }
 
 .interests li img {
      width: 350px; }
 
-.interests #placa {
-     float:left; }
-
 .interests #placa2 {
-     float:right; }
+    right:20px!important; }
 
 .earth {
   position: absolute;
