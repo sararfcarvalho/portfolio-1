@@ -207,8 +207,9 @@ footer { height: 500px; position: relative; display:block;  }
 
 #placa2 {
   width: 350px;
-  position:relatve; 
-  right:0;
+  position: absolute;
+  right: 0;
+  z-index: 20;
 }
 
 #placa2 img {
